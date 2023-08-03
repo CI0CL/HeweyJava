@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  bookstore_jdbc_ex1:
+    image: mysql:5.7
+    container_name: bookstore
+    restart: always
+    volumes:
+        - ./mysql-dump:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bookstore_jdbc_ex1
+      MYSQL_USER: createment
+      MYSQL_PASSWORD: createment
+    ports:
+      - "3306:3306"
+    networks:
+      - bookstore_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: bookstore_jdbc_ex1
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "8085:80"
+    depends_on:
+      - bookstore_jdbc_ex1
+    networks:
+      - bookstore_network
+
+networks:
+  bookstore_network:
+    driver: bridge

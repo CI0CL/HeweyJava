@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta>
+		<title> 
+		</title>
+	</head>
+
+	<body>
+		<p>Hello World</p>  >> Ruimte tussen de paragraaf
+
+	</body>
+</html>
+
+* <h1> hou rekening met accessibility, " altijd maar een" 
+* <span> = voor CSS elementen, gebruik bij specifieke styling
+* Zet head niet te vol, maakt website langzaam
+
+<img src="image.jpg" alt="an image">  >> alt niet alleen voor foutmelding, ook voor accessibility
+
+* Liever niet inline, maar CSS
+
+<p style="color: red;">This text is red.</p> >> let op, verschillende systemen, verschillende kleuren rood
+
+* gebruik #nummer
+*Sans Serive? == beste default
+
+
+<p style ="font-family: Arial; (default); font-size: 12px; font-weight: bold; background-color: yellow;"> "text" </p>
+
+* font-weight = (bold = 700), (xl bold = 900), (normal = 300)
+_______________________________________________________________________________________________ Deel 2
+
+<div>
+>> voor formatting
+
+<a>
+>> voor links
+>> voor 'anchors' = <a href="#section!" > link To section 1</a> *Scroll to top FI / # >> duidt op section op dezelfde pagina.
+
+<ol> / <il>
+>> ordered versus unordered
+	- ul wordt het meeste gebruikt
+
+<ol>
+	<li>
+	<li>
+</ol>
+
+>> nested lists zijn mogelijk
+
+_______________________________________________________________________________________________ Deel 3
+HTML TABLES
+
+rows + columns
+
+<table> >> table
+--> <tr> >> table row
+	--> <th> >>
+	   -->
+		--> <td> >> singe cell
+
+<thead> >> for styling, accessibility, description
+<tbody> >> styling, accessibility, description
+<tfoot> >> " " "
+
+<link rel=""stylesheet" href="styles.css">
+
+FLOAT
+BLOCK = New line and takes up the full width available > pushes stuff down.
+INLINE = do not start on a new line (tegenpool BLOCK)
+Display INLINE-BLOCK = Wegdrukken van text, als nodig.
+
+concepten:
+.wrapper {
+	width:960px;
+	margin: 0 auto;
+}
+
+.fluid_container{
+	width: 100%;
+	padding: 0 15px;
+}
+
+PADDING >> content naar binnen (inward) 
+MARGIN >> content naar buiten (outward), zoals bij <p>
+
+BOX-SIZING: Padding valt binnen de box. Specified width  + height > resizes content,
+div {
+	box-sizing: border-box;
+}
+
+_______________________________________________________________________________________________ Deel 4
+FORMS!
+
+Geef alles een naam! (accessibility)
+
+~input~
+<input type = "text" name="username" placeholder="Username">
+
+~label~
+<label> add everywhere to signify element
+
+~text area~
+<textarea name = "message" placeholder="Your message"...>
+
+~Select~
+~Checkbox ~
+~ GET & POST ~
+
+FORM styling is anders! (check out formatting!)
+
+article vs section
+
+--- 
+Media queries:
+@media (...) {}
+
+MOBILE FIRST : vanuit mobiele devices first
+
+Fluid layouts + flexible images
+
+Testing & Debugging
+> different browsers
+
+
+
+
+
+
+

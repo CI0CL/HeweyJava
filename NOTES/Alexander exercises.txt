@@ -1,0 +1,99 @@
+1) Select all ordered books and their price
+
+2) Add genres to the above query
+
+3) Group everything by genre and calculate the total price of all books
+
+4) Order the results by total price
+
+5) Select top result
+
+
+---
+Assignment: make 2 models:
+Conceptual model
+Logical/Physical model
+
+
+---
+Exercise 1: Identify the properties of a book
+The idea of software development is to translate real things and problems into code. In this case, JAVA code. In the future we want to do an application to sell books, but we will need to learn many thing first. Lest start with it!. The idea of this exercise is to identify a book but its properties. Think that this book will be sold in a shop. Which properties do you think are relevant regarding a book?.
+Learning objectives
+Understand what variables are for.
+Understand how we translate real things to code (abstraction)
+Understand the concept of variable type.
+Tasks
+Take few minutes to think about properties or things connected to a book. For example, “author”. List them all and discuss it with other students and teacher.
+Transform the previous properties in JAVA variables. Which name do you assign to them?. What about the type?. Select the suitable type and explain why you use it.
+Do you remember how the “Hello world” text is displayed?. Display a text explaining your book using the properties you created. This means that I don’t need to change the text, just the variable values to “speak” about a different book. Example: “This book was written by Some Author and the price is Some Amount EUR”. Try to use all the properties you created.
+
+---
+Exercise 2: Search for a specific book
+is to identify one specific book from several that we define in our code using variables.
+Learning objectives
+Use if/else for making decisions in your program
+Identify multiple elements using variables
+Tasks
+In the previous exercise we identified a book with a set of variables. For example one String variable called “author”. Create new set of variables for two more books. You can use set of variables names like “author1", “author2” and so on.
+Do a java program that use the previous variables and find a book that contains some text in one of the variables. For example, “author that starts with the letter A”. Print the previous book description for the book that matches the condition. Print “Not found” when the condition is not found in any of the books.
+Play with different properties of the book. What’s the problem if we increase the number of the books?.
+
+---
+Exercise 3: Deal with many books!
+You saw that one of our limitations is the quantity of books we can manage. It’s not easy to extend the quantity of them and the code becomes dirty. In this exercise we will explore the way to deal with variable quantity of books in a way that will be easier to add new books to our code.
+Learning objectives
+Use loops to process our variable data
+Understand the use of arrays
+Tasks
+Create arrays of the properties you defined for your book. Note that you will not use a different variable for different books. Instead, the same array variable will be used but each book data will be in a different array index.
+Change your code to do the same search you did in the previous exercise, but this time instead of displaying the first one, display all the occurrences. As usual if none is found display “Not found”. Which kind of loop do you use?.
+Create a constant for the maximum number of books you can have. Where can you use that constant?
+
+---
+
+Exercise 4: Search for a specific book part two
+Learning objectives
+How to get input from user
+Tasks
+Search and find a way to read input from user in java
+Read authorToBeFound from Console from user
+
+---
+Exercise 5: Create Calculator
+Learning objectives
+How to get input from user
+How to create complex decision making
+Understanding how CLI applications works
+Tasks
+Show calculator menu to user: every calculation consists of 3 steps - first operand (number), operation type, second operand (number)
+Use the following hints to ask for the operation type: ( Please enter Number of operation : 1- Add , 2- Subtract, 3- Multiply, 4-Divide )
+Use switch/case to implement logic per operation
+Manage the cases that user input leads to error and display proper error: invalid number, incorrect operation type, division by zero etc.
+The calculator should work in a loop: after performing a calculation it should display the result and then ask for input for the next operation
+If the user wants to stop the program they should type “exit” at any time
+
+---
+Final Exercise 1:
+Read all books from the database and save the data into the CSV file.
+The resulting CSV file should contain all fields that you have in the books table.
+Final Exercise 2:
+Read all books from a CSV file and save the data into the database.
+Make it work in such a way that if you run the program multiple times it doesn’t duplicate data in the database and just adds new data.
+
+---
+
+Book store web app
+May be you remember your html page that you created in a previous exercise to display books details. Now it’s time to learn how we connect that static page with a JAVA Web application. Useful web applications need to use data in your JAVA applications. We will start exploring it.
+Learning objectives
+Connect JAVA dynamic data with Web pages
+Understand how we send data to the templates to be displayed.
+Tasks
+You have been given a Spring Boot application that connects to a database and displays data related to books and customers in a web application. Your task is to complete the implementation of three controller methods and display data using Thymeleaf templates.
+1- Complete the showLastBook method in the BasicController class to retrieve the last book from the books table using a SQL query, create a Map object to hold the book details, and add it to the model object. Then, return the name of the Thymeleaf template to display the book details.
+2- Complete the showAllCustomers method in the BasicController class to retrieve all customers from the customers table using a SQL query, create a Map object to hold the customer details, and add it to the model object. Then, return the name of the Thymeleaf template to display the customer details.
+3- Complete the showCustomerDetailsById method in the BasicController class to retrieve a single customer from the customers table using a SQL query and the id parameter passed in the URL, create a Map object to hold the customer details, and add it to the model object. Then, return the name of the Thymeleaf template to display the customer details.
+Bonus Task:
+Add a new method to the BasicController class that accepts a customer ID as a parameter in the URL and retrieves the customer details from the customers table using a SQL query. Create a Map object to hold the customer details, add it to the model object, and return the name of the Thymeleaf template to display the customer details.
+
+---
+
